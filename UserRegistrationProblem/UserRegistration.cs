@@ -12,6 +12,8 @@ namespace UserRegistrationProblem
         public static string lastName = "^[A-Z]{1}[A-Za-z]{2,}$";
         //Pattern for checking the email with @ precise and . position
         public static string Email = "^[a-zA-Z]+@[a-zA-Z]+.+([co.in|com])$";
+        //Pattern for checking the mobile number
+        public static string mobileNumber = "^[1-9]{2}[: :][0-9]{10}$";
 
         //Method to check the firstname using regex
         public static void ValidateFirstName(string fName)
@@ -44,11 +46,24 @@ namespace UserRegistrationProblem
         {
             if (Regex.IsMatch(email, Email))
             {
-                Console.WriteLine("Given email is valid");
+                Console.WriteLine("Email is valid "+email);
             }
             else
             {
                 Console.WriteLine("Given email is not valid ");
+            }
+        }
+
+        //Method to check mobile number using regex
+        public static void ValidateMobileNumber(string number)
+        {
+            if (Regex.IsMatch(number, mobileNumber))
+            {
+                Console.WriteLine("Mobile Number is valid "+number);
+            }
+            else
+            {
+                Console.WriteLine("Mobile Number with country code followed by space and 10 digit number");
             }
         }
 
