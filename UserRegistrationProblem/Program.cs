@@ -34,7 +34,7 @@ internal class Program
                     UserRegistration.ValidateMobileNumber(number);
                     break;
                 case 5:
-                    Console.WriteLine("Enter Password ");
+                    Console.WriteLine("Enter Password");
                     string password = Console.ReadLine();
                     UserRegistration.ValidatePassword(password);
                     break;

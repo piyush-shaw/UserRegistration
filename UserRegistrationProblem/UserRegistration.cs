@@ -14,8 +14,9 @@ namespace UserRegistrationProblem
         public static string Email = "^[a-zA-Z]+@[a-zA-Z]+.+([co.in|com])$";
         //Pattern for checking the mobile number
         public static string mobileNumber = "^[1-9]{2}[: :][0-9]{10}$";
-        //Pattern for checking password having 8 character
-        public static string Password = "^[A-Za-z]{8}$";
+        //Pattern for checking password having 8 character and atleast one uppercase
+        public static string Password = "^(?=.*[A-Z])[a-zA-Z]{8,}$";
+        
 
         //Method to check the firstname using regex
         public static void ValidateFirstName(string fName)
@@ -78,7 +79,7 @@ namespace UserRegistrationProblem
             }
             else
             {
-                Console.WriteLine("Password must have minimum 8 character ");
+                Console.WriteLine("Password must have minimum 8 character and atleast one uppercase");
             }
         }
     }
