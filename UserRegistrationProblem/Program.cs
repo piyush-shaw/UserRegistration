@@ -9,7 +9,7 @@ internal class Program
         while (flag)
         {
             Console.WriteLine("\nSelect option to choice ");
-            Console.WriteLine("\n1.First Name \n2.Last Name");
+            Console.WriteLine("\n1.First Name \n2.Last Name \n3.Email");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -22,6 +22,11 @@ internal class Program
                     Console.WriteLine("Enter Last Name");
                     string lName = Console.ReadLine();
                     UserRegistration.ValidateLastName(lName);
+                    break;
+                case 3:
+                    Console.WriteLine("Enter Email Id ");
+                    string email = Console.ReadLine();
+                    UserRegistration.ValidateEmail(email);
                     break;
                 default:
                     flag = false;
