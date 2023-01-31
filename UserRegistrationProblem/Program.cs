@@ -9,7 +9,7 @@ internal class Program
         while (flag)
         {
             Console.WriteLine("\nSelect option to choice ");
-            Console.WriteLine("\n1.First Name \n2.Last Name \n3.Email \n4.MobileNumber \n5.Password");
+            Console.WriteLine("\n1.First Name \n2.Last Name \n3.Email \n4.MobileNumber \n5.Password \n6.Sample Email");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -37,6 +37,11 @@ internal class Program
                     Console.WriteLine("Enter Password");
                     string password = Console.ReadLine();
                     UserRegistration.ValidatePassword(password);
+                    break;
+                case 6:
+                    Console.WriteLine("Enter Sample Email to Check");
+                    string sampleEmail = Console.ReadLine();
+                    UserRegistration.ValidateSampleEmail(sampleEmail);
                     break;
                 default:
                     flag = false;
